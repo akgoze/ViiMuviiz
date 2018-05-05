@@ -1,0 +1,19 @@
+<div class="input-group mb-3" id="search">
+  <input type="text" class="form-control form-control-lg" placeholder="Filmin adını yazın" aria-label="Filmin adını yazın"
+    aria-describedby="basic-addon2"  (keyup.enter)="GetMovies(f.value)" #f>
+  <div class="input-group-append">
+    <button class="btn btn-primary" type="button">Yeni film ara</button>
+  </div>
+</div>
+
+<div id="search-result">
+  <h2 class="display-4"> ilgili filmler</h2>
+  <hr>
+  <div class="row">
+    <div class="col-2" *ngFor="let movie of movies">
+      <img src="{{movie.Poster}}" alt="{{movie.Title}}">
+      <h6>{{movie.Title}}</h6>
+      <a href="https://www.imdb.com/title/{{movie.imdbID}}">IMDB link</a>
+    </div>
+  </div>
+</div>
