@@ -1,11 +1,11 @@
 <div id="dashboard">
-  <h2 class="display-4"> ilgili filmler</h2>
+  <h2 class="display-4"> Filmler</h2>
   <hr>
   <div class="row">
-    <div class="col-2">
-      <img src="" alt="">
-      <h6>MOVIE_NAME</h6>
-      <a href="MOVIE_URL">MOVIE_URL</a>
+    <div class="col-2" *ngFor="let movie of movies | async">
+      <img src="{{movie.movie_poster}}" alt="{{movie.movie_name}}">
+      <h6>{{movie.movie_name}}</h6>
+      <a href="{{movie.movie_url}}">IMDB link</a>
     </div>
   </div>
 
