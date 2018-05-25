@@ -3,3 +3,13 @@
     width: 80%;
     margin: 32px auto;
 }
+
+.movie-item {
+
+}
+.movie-item .poster img{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    height: auto;
+}

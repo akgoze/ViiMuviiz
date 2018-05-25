@@ -10,10 +10,28 @@
   <h2 class="display-4"> ilgili filmler</h2>
   <hr>
   <div class="row">
-    <div class="col-2" *ngFor="let movie of movies">
-      <img src="{{movie.Poster}}" alt="{{movie.Title}}">
-      <h6>{{movie.Title}}</h6>
-      <a href="https://www.imdb.com/title/{{movie.imdbID}}">IMDB link</a>
+    <div class="col-2 movie-item" *ngFor="let movie of movies">
+      <div class="poster">
+        <img src="{{movie.Poster}}" alt="{{movie.Title}}">
+      </div>
+      <h6 class="title">{{movie.Title}}</h6>
+      <input type="hidden" name="" value="{{movie.imdbID}}" #movieId>
+      <button type="button" class="button" (click)="viewDetail(movieId.value)">View</button>
     </div>
   </div>
+</div>
+
+<div class="movie-detail">
+  <h1 class="movie-name">{{movieDetails.title}}</h1>
+  <h6 class="movie-short">{{movieDetails.actors}}</h6>
+  <p class="year">{{movieDetails.awards}}</p>
+  <p class="country">{{movieDetails.country}}</p>
+  <ul class="cast">
+    <li class="cast-item"></li>
+    <li class="cast-item"></li>
+    <li class="cast-item"></li>
+    <li class="cast-item"></li>
+    <li class="cast-item"></li>
+  </ul>
+
 </div>
