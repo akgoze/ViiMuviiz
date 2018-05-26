@@ -15,8 +15,11 @@
         <img src="{{movie.Poster}}" alt="{{movie.Title}}">
       </div>
       <h6 class="title">{{movie.Title}}</h6>
-      <input type="hidden" name="" value="{{movie.imdbID}}" #movieId>
+      <input type="hidden" value="{{movie.imdbID}}" #movieId>
+      <input type="hidden" value="{{movie.Title}}" #movieTitle>
+      <input type="hidden" value="{{movie.Poster}}" #moviePoster>
       <button type="button" class="button" (click)="viewDetail(movieId.value)">View</button>
+      <button (click)="AddMovie(movieId, movieTitle, moviePoster)">Add My Movies</button>
     </div>
   </div>
 </div>
@@ -26,12 +29,4 @@
   <h6 class="movie-short">{{movieDetails.actors}}</h6>
   <p class="year">{{movieDetails.awards}}</p>
   <p class="country">{{movieDetails.country}}</p>
-  <ul class="cast">
-    <li class="cast-item"></li>
-    <li class="cast-item"></li>
-    <li class="cast-item"></li>
-    <li class="cast-item"></li>
-    <li class="cast-item"></li>
-  </ul>
-
 </div>
